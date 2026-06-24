@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* surfaces & text */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+
+    /* primary — Wave v2.blue.500 #0072EF */
+    --primary: 211 100% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    /* secondary — Wave grey.100 #F4F5F6 */
+    --secondary: 210 8% 96%;
+    --secondary-foreground: 0 0% 4%;
+
+    /* muted — Wave grey.100 / grey.500 */
+    --muted: 210 8% 96%;
+    --muted-foreground: 192 11% 40%;
+
+    /* accent — hover surface */
+    --accent: 210 8% 96%;
+    --accent-foreground: 0 0% 4%;
+
+    /* destructive — Wave error.600 #D64D62 */
+    --destructive: 351 63% 57%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* borders, inputs, focus */
+    --border: 195 9% 90%;
+    --input: 195 9% 90%;
+    --ring: 210 96% 70%;
+
+    /* brand gradient — indigo → violet → cyan */
+    --brand-from: 211 100% 47%;
+    --brand-via: 262 83% 62%;
+    --brand-to: 190 95% 50%;
+
+    /* sidebar — slightly off-white shell */
+    --sidebar: 0 0% 98%;
+    --sidebar-foreground: 0 0% 4%;
+    --sidebar-primary: 211 100% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 195 11% 93%;
+    --sidebar-accent-foreground: 0 0% 4%;
+    --sidebar-border: 195 9% 90%;
+    --sidebar-ring: 210 96% 70%;
+
+    /* radius — shadcn default */
+    --radius: 0.625rem;
+
+    /* shadows — from design system (colors_and_type.css) */
+    --shadow-sm: 0 6px 24px -4px rgb(0 0 0 / 0.08), 0 2px 6px -3px rgb(0 0 0 / 0.05);
+    --shadow-md: 0 24px 56px -8px rgb(0 0 0 / 0.11), 0 10px 22px -6px rgb(0 0 0 / 0.06);
+  }
+
+  .dark {
+    --background: 220 26% 6%;
+    --foreground: 210 16% 93%;
+
+    --card: 220 22% 9%;
+    --card-foreground: 210 16% 93%;
+
+    --popover: 220 22% 9%;
+    --popover-foreground: 210 16% 93%;
+
+    --primary: 210 96% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 22% 14%;
+    --secondary-foreground: 210 16% 93%;
+
+    --muted: 215 22% 12%;
+    --muted-foreground: 214 14% 62%;
+
+    --accent: 215 22% 16%;
+    --accent-foreground: 210 16% 93%;
+
+    --destructive: 352 86% 67%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 18%;
+    --input: 215 20% 18%;
+    --ring: 211 100% 47%;
+
+    --brand-from: 211 100% 55%;
+    --brand-via: 262 83% 68%;
+    --brand-to: 190 95% 55%;
+
+    --sidebar: 195 13% 16%;
+    --sidebar-foreground: 210 8% 96%;
+    --sidebar-primary: 210 96% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 195 8% 25%;
+    --sidebar-accent-foreground: 210 8% 96%;
+    --sidebar-border: 195 8% 25%;
+    --sidebar-ring: 211 100% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  ::selection {
+    background-color: hsl(var(--brand-via) / 0.3);
+  }
+}
+
+@layer components {
+  /* Text painted with the brand gradient. */
+  .text-gradient {
+    @apply bg-gradient-to-r from-[hsl(var(--brand-from))] via-[hsl(var(--brand-via))] to-[hsl(var(--brand-to))] bg-clip-text text-transparent;
+  }
+
+  /* Frosted surface used for cards and the nav bar. */
+  .glass {
+    @apply border border-white/10 bg-card/60 backdrop-blur-xl;
+  }
+
+  /* Animated conic gradient border wrapper. */
+  .gradient-ring {
+    background: linear-gradient(
+      to right,
+      hsl(var(--brand-from)),
+      hsl(var(--brand-via)),
+      hsl(var(--brand-to))
+    );
+    background-size: 200% 200%;
+  }
+
+  /* Subtle dotted grid backdrop. */
+  .grid-backdrop {
+    background-image: radial-gradient(hsl(var(--foreground) / 0.07) 1px, transparent 1px);
+    background-size: 32px 32px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 9999px;
+  border: 2px solid hsl(var(--background));
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
