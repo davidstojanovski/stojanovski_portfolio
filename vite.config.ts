@@ -2,7 +2,9 @@ import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
 import { fileURLToPath, URL } from "node:url"
 
+// Served from https://davidstojanovski.github.io/stojanovski_portfolio/
 export default defineConfig({
+  base: "/stojanovski_portfolio/",
   plugins: [react()],
   server: {
     port: 8080,
