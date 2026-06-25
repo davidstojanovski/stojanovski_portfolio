@@ -5,7 +5,7 @@ export const PROFILE: Profile = {
   role: "Lead Software Engineer",
   year: "2026",
   tagline:
-    "A software architect who builds products from the ground up — shaping the architecture, then engineering it end to end, from the first line of code to systems that scale.",
+    "A software architect with a master's degree in Computer Science who builds products from the ground up — shaping the architecture, then engineering it end to end, from the first line of code to systems that scale.",
   roles: ["Lead Software Engineer", "Full-Stack Developer", "React & Go Specialist", "System Designer"],
   about: [
     "I'm a Lead Software Engineer with a master's degree in Computer Science and Engineering and nearly a decade of professional experience, focused primarily on web development across a broad range of technologies, practices and architectural principles.",
