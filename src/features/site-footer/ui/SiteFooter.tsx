@@ -12,7 +12,6 @@ export function SiteFooter() {
             © {PROFILE.year} {PROFILE.name}
           </p>
         </div>
-        <p className="font-mono text-xs">Built with React, TypeScript &amp; Tailwind CSS</p>
       </div>
     </footer>
   )

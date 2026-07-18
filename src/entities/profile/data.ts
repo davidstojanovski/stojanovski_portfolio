@@ -1,3 +1,5 @@
+import { withBase } from "shared/lib"
+
 import { type Profile } from "./types"
 
 export const PROFILE: Profile = {
@@ -14,7 +16,7 @@ export const PROFILE: Profile = {
   ],
   location: "Skopje, North Macedonia",
   email: "david.stojanovski@yahoo.com",
-  cvUrl: "/david-stojanovski-cv.pdf",
+  cvUrl: withBase("david-stojanovski-cv.pdf"),
   stats: [
     { value: "10+", label: "Years building software" },
     { value: "3M+", label: "Monthly readers served" },

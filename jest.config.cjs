@@ -6,6 +6,8 @@ module.exports = {
     "^.+\\.(ts|tsx|js|jsx)$": "babel-jest",
   },
   moduleNameMapper: {
+    // import.meta is unavailable under the CommonJS transform — stub the base-url helper
+    "base-url$": "<rootDir>/tests/__mocks__/base-url.ts",
     "^pages/(.*)$": "<rootDir>/src/pages/$1",
     "^features/(.*)$": "<rootDir>/src/features/$1",
     "^entities/(.*)$": "<rootDir>/src/entities/$1",

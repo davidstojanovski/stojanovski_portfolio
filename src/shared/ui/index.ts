@@ -1,5 +1,8 @@
 export { Button } from "./button"
 export { Badge } from "./badge"
+export { Input } from "./input"
+export { Textarea } from "./textarea"
+export { Label } from "./label"
 export { Reveal } from "./reveal"
 export { Section } from "./section"
 export { LinkedInIcon } from "./icons"
