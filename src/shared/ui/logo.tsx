@@ -1,5 +1,3 @@
-import { useId } from "react"
-
 import { cn } from "shared/lib"
 
 type LogoProps = {
@@ -12,16 +10,8 @@ type LogoProps = {
   wordmark?: string
 }
 
-/**
- * Brand mark: an isometric gradient cube — "built from the ground up".
- * Three shaded faces give it depth; works on light and dark surfaces.
- */
+/** Solid blue D monogram with a forward-slash cutout. */
 export function Logo({ className, markClassName, withWordmark = false, wordmark = "david.dev" }: LogoProps) {
-  const id = useId()
-  const top = `cube-top-${id}`
-  const left = `cube-left-${id}`
-  const right = `cube-right-${id}`
-
   return (
     <span className={cn("inline-flex items-center gap-2", className)}>
       <svg
@@ -30,30 +20,11 @@ export function Logo({ className, markClassName, withWordmark = false, wordmark 
         role="img"
         aria-label="David Stojanovski logo"
       >
-        <defs>
-          <linearGradient id={top} x1="9" y1="7" x2="55" y2="33" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#34D3EE" />
-            <stop offset="1" stopColor="#2C9BE8" />
-          </linearGradient>
-          <linearGradient id={left} x1="9" y1="20" x2="32" y2="58" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#2C7BE5" />
-            <stop offset="1" stopColor="#3F38C9" />
-          </linearGradient>
-          <linearGradient id={right} x1="32" y1="20" x2="55" y2="58" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#7C5CF0" />
-            <stop offset="1" stopColor="#5B21B6" />
-          </linearGradient>
-        </defs>
-        <polygon points="32,6 55,19.5 32,33 9,19.5" fill={`url(#${top})`} />
-        <polygon points="9,19.5 32,33 32,58 9,44.5" fill={`url(#${left})`} />
-        <polygon points="55,19.5 32,33 32,58 55,44.5" fill={`url(#${right})`} />
         <path
-          d="M32 6 L55 19.5 L32 33 L9 19.5 Z"
-          fill="none"
-          stroke="#FFFFFF"
-          strokeOpacity="0.28"
-          strokeWidth="1.1"
-          strokeLinejoin="round"
+          d="M12 10H29C45 10 54 19 54 32S45 54 29 54H12V10ZM33 21L23 43H30L40 21H33Z"
+          className="fill-primary"
+          fillRule="evenodd"
+          clipRule="evenodd"
         />
       </svg>
       {withWordmark && <span className="font-mono text-sm font-bold tracking-tight">{wordmark}</span>}

@@ -5,7 +5,6 @@ import { Button, SocialLinks } from "shared/ui"
 
 import { useSpotlight } from "../model/use-spotlight"
 import { AnimatedRoles } from "./AnimatedRoles"
-import { HeroBackdrop } from "./HeroBackdrop"
 import { HeroStats } from "./HeroStats"
 
 /** Landing viewport: name, rotating role, tagline, CTAs and key stats. */
@@ -17,14 +16,12 @@ export function Hero() {
       id="home"
       ref={ref}
       onMouseMove={onMouseMove}
-      className="group relative flex min-h-screen items-center overflow-hidden pt-28"
+      className="group relative flex min-h-screen items-center overflow-hidden pb-40 pt-28"
       style={{
         backgroundImage:
           "radial-gradient(600px circle at var(--spot-x, 50%) var(--spot-y, 0%), hsl(var(--brand-via) / 0.10), transparent 70%)",
       }}
     >
-      <HeroBackdrop />
-
       <div className="mx-auto w-full max-w-5xl px-6">
         <div className="mb-6 inline-flex animate-fade-in items-center gap-2 rounded-full border border-border bg-card/50 px-4 py-1.5 text-sm text-muted-foreground backdrop-blur">
           <span className="relative flex size-2">
@@ -72,6 +69,9 @@ export function Hero() {
         aria-label="Scroll to about"
         className="absolute inset-x-0 bottom-8 mx-auto grid size-10 place-items-center text-muted-foreground transition-colors hover:text-primary"
       >
+        <span className="absolute bottom-12 whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.2em]">
+          Scroll into the motherboard
+        </span>
         <ChevronDown className="size-6 animate-bounce" />
       </a>
     </section>
