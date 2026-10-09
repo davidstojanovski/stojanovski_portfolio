@@ -93,7 +93,7 @@ export function createLaptop() {
     ctx.restore()
     ctx.fillStyle = "#91b9de"
     ctx.font = "22px monospace"
-    ctx.fillText("david.dev", 64, 65)
+    ctx.fillText("davidstojanovski.com", 64, 65)
     ctx.fillStyle = "#ecf4ff"
     ctx.font = "bold 76px sans-serif"
     ctx.fillText("David", 100, 285)

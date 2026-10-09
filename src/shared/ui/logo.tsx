@@ -11,7 +11,7 @@ type LogoProps = {
 }
 
 /** Solid blue D monogram with a forward-slash cutout. */
-export function Logo({ className, markClassName, withWordmark = false, wordmark = "david.dev" }: LogoProps) {
+export function Logo({ className, markClassName, withWordmark = false, wordmark = "davidstojanovski.com" }: LogoProps) {
   return (
     <span className={cn("inline-flex items-center gap-2", className)}>
       <svg
