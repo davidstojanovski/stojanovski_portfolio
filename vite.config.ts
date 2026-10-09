@@ -2,9 +2,9 @@ import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
 import { fileURLToPath, URL } from "node:url"
 
-// Served from https://davidstojanovski.github.io/stojanovski_portfolio/
+// Served from https://davidstojanovski.com/ (Vercel)
 export default defineConfig({
-  base: "/stojanovski_portfolio/",
+  base: "/",
   plugins: [react()],
   server: {
     port: 8080,

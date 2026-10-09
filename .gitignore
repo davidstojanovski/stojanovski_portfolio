@@ -27,3 +27,5 @@ coverage
 # Local env & secrets
 .env.local
 .npmrc
+.env
+.vercel

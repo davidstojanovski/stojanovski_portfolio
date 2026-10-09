@@ -1,6 +1,6 @@
 # david-stojanovski
 
-Personal portfolio site for David Stojanovski — Lead Software Engineer & Software Architect.
+Personal portfolio site for David Stojanovski — Lead RevOps Engineer bridging engineering and go-to-market.
 A modern, interactive single-page React app (no backend).
 
 ## Getting started
