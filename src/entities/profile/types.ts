@@ -2,7 +2,7 @@ export type Social = {
   label: string
   href: string
   /** lucide-react icon name, resolved at the UI layer. */
-  icon: "linkedin" | "mail" | "github" | "mapPin"
+  icon: "linkedin" | "mail" | "github"
 }
 
 export type Stat = {
@@ -14,7 +14,7 @@ export type Experience = {
   company: string
   role: string
   period: string
-  location: string
+  location?: string
   summary: string
   highlights: string[]
   stack: string[]
@@ -33,6 +33,11 @@ export type Education = {
   detail?: string
 }
 
+export type SpokenLanguage = {
+  name: string
+  level: string
+}
+
 export type Profile = {
   name: string
   role: string
@@ -40,12 +45,11 @@ export type Profile = {
   tagline: string
   roles: string[]
   about: string[]
-  location: string
   email: string
-  cvUrl: string
   stats: Stat[]
   socials: Social[]
   experiences: Experience[]
   skillGroups: SkillGroup[]
   education: Education[]
+  languages: SpokenLanguage[]
 }

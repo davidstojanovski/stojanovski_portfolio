@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronDown, Download, Sparkles } from "lucide-react"
+import { ArrowRight, ChevronDown, Sparkles } from "lucide-react"
 
 import { PROFILE } from "entities/profile"
 import { Button, SocialLinks } from "shared/ui"
@@ -28,7 +28,7 @@ export function Hero() {
             <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
           </span>
-          Available for consulting & freelance projects
+          Advising companies on GTM, RevOps & engineering to drive growth
         </div>
 
         <p className="mb-3 flex items-center gap-2 font-mono text-sm text-primary">
@@ -49,11 +49,6 @@ export function Hero() {
           <Button asChild>
             <a href="#contact">
               Get in touch <ArrowRight />
-            </a>
-          </Button>
-          <Button asChild variant="outline">
-            <a href={PROFILE.cvUrl} download>
-              Download CV <Download />
             </a>
           </Button>
           <SocialLinks items={PROFILE.socials} className="ml-1" />

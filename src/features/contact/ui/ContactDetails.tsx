@@ -1,11 +1,11 @@
-import { Check, Copy, Download } from "lucide-react"
+import { Check, Copy } from "lucide-react"
 
 import { PROFILE } from "entities/profile"
 import { Button, SocialLinks } from "shared/ui"
 
 import { useCopyEmail } from "../model/use-copy-email"
 
-/** Intro copy plus direct ways to reach out — email, CV and socials. */
+/** Intro copy plus direct ways to reach out — email and socials. */
 export function ContactDetails() {
   const { hasCopied, copyEmail } = useCopyEmail(PROFILE.email)
 
@@ -24,11 +24,6 @@ export function ContactDetails() {
         <Button variant="outline" onClick={copyEmail}>
           {hasCopied ? <Check /> : <Copy />}
           {hasCopied ? "Copied!" : PROFILE.email}
-        </Button>
-        <Button asChild variant="ghost" className="text-muted-foreground">
-          <a href={PROFILE.cvUrl} download>
-            <Download /> Download my CV
-          </a>
         </Button>
       </div>
 

@@ -2,11 +2,12 @@ import { PROFILE } from "entities/profile"
 import { Reveal, Section } from "shared/ui"
 
 import { EducationCard } from "./EducationCard"
+import { LanguagesCard } from "./LanguagesCard"
 import { TechMarquee } from "./TechMarquee"
 
 const MARQUEE_ITEMS = PROFILE.skillGroups.flatMap((group) => group.skills)
 
-/** Narrative bio paired with an education panel and tech marquee. */
+/** Narrative bio paired with education, languages and tech marquee. */
 export function About() {
   return (
     <Section id="about" eyebrow="01 — About" title="A bit about me">
@@ -28,6 +29,13 @@ export function About() {
               <EducationCard education={education} />
             </Reveal>
           ))}
+
+          <Reveal>
+            <h3 className="pt-4 font-mono text-sm tracking-widest text-primary">LANGUAGES</h3>
+          </Reveal>
+          <Reveal delay={120}>
+            <LanguagesCard languages={PROFILE.languages} />
+          </Reveal>
         </div>
       </div>
 

@@ -1,11 +1,11 @@
-import { AtSign, Mail, MapPin, type LucideIcon } from "lucide-react"
+import { AtSign, Mail, type LucideIcon } from "lucide-react"
 import { type ComponentType, type SVGProps } from "react"
 
 import { cn } from "shared/lib"
 
 import { LinkedInIcon } from "./icons"
 
-export type SocialIcon = "linkedin" | "mail" | "github" | "mapPin"
+export type SocialIcon = "linkedin" | "mail" | "github"
 
 export type SocialItem = {
   label: string
@@ -16,7 +16,6 @@ export type SocialItem = {
 const ICONS: Record<SocialIcon, LucideIcon | ComponentType<SVGProps<SVGSVGElement>>> = {
   linkedin: LinkedInIcon,
   mail: Mail,
-  mapPin: MapPin,
   github: AtSign,
 }
 

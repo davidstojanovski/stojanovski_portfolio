@@ -29,7 +29,7 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
           ) : (
             <span className="font-medium text-primary">{experience.company}</span>
           )}
-          <span className="text-muted-foreground">· {experience.location}</span>
+          {experience.location ? <span className="text-muted-foreground">· {experience.location}</span> : null}
         </div>
 
         <p className="mt-3 text-muted-foreground">{experience.summary}</p>

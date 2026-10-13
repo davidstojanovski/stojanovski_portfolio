@@ -1,5 +1,3 @@
-import { withBase } from "shared/lib"
-
 import { type Profile } from "./types"
 
 export const PROFILE: Profile = {
@@ -14,9 +12,7 @@ export const PROFILE: Profile = {
     "Today I lead Revenue Operations engineering for a B2B SaaS product. I design the data models, pipelines and tooling behind the go-to-market motion, build the CRM integrations and automations that keep sales, marketing and customer teams moving, and work with leadership on GTM strategy, attribution and analytics.",
     "Before that I led full-stack engineering on the same product, coordinated the delivery of a high-traffic news platform, built public-health and large-scale e-commerce systems, and mentored 50+ aspiring developers. I help teams with engineering, and I can consult them on GTM, analytics and data just as readily.",
   ],
-  location: "Skopje, North Macedonia",
   email: "david.stojanovski@yahoo.com",
-  cvUrl: withBase("david-stojanovski-cv.pdf"),
   stats: [
     { value: "10+", label: "Years building software" },
     { value: "50+", label: "Developers mentored" },
@@ -29,7 +25,6 @@ export const PROFILE: Profile = {
       icon: "linkedin",
     },
     { label: "Email", href: "mailto:david.stojanovski@yahoo.com", icon: "mail" },
-    { label: "Skopje, North Macedonia", href: "#about", icon: "mapPin" },
   ],
   experiences: [
     {
@@ -45,7 +40,18 @@ export const PROFILE: Profile = {
         "Partner with GTM leadership on strategy, analytics and data, turning revenue questions into measurable systems",
         "Previously led full-stack engineering: owned code quality end to end and helped shape the product roadmap",
       ],
-      stack: ["TypeScript", "Go", "Python", "PostgreSQL", "BigQuery", "HubSpot", "React"],
+      stack: [
+        "TypeScript",
+        "Go",
+        "Python",
+        "PostgreSQL",
+        "MongoDB",
+        "TimescaleDB",
+        "BigQuery",
+        "HubSpot",
+        "React",
+        "Vue",
+      ],
     },
     {
       company: "Netcetera",
@@ -55,7 +61,7 @@ export const PROFILE: Profile = {
       href: "https://www.netcetera.com/",
       summary: "Delivered end-to-end solutions across digital media, public health and large-scale e-commerce.",
       highlights: [
-        "Tech coordinator for a major German news platform, leading delivery across a microservices architecture",
+        "Tech coordinator for a major German news platform with 3M+ monthly views, leading delivery across a microservices architecture",
         "Led client communication, task delegation and full-stack work across a microservices architecture",
         "Built a Swiss cantonal health-promotion platform and one of the country's largest ticket-reservation systems",
       ],
@@ -77,14 +83,33 @@ export const PROFILE: Profile = {
     {
       company: "One Inside",
       role: "Java Software Developer",
-      period: "Sep 2017 — May 2018",
+      period: "Jun 2017 — May 2018",
       location: "Skopje, North Macedonia",
+      href: "https://www.one-inside.com/",
       summary: "Built AEM components and services with SOLR-powered search for enterprise content platforms.",
       highlights: [
         "Implemented Adobe AEM/CQ5 components and OSGi services",
         "Developed SOLR search integrations backed by unit tests",
+        "Started as an intern building Angular components on top of RESTful services, SQL Server and Firebase",
       ],
-      stack: ["Java", "Apache Sling", "Adobe AEM", "OSGi", "JCR"],
+      stack: ["Java", "Apache Sling", "Adobe AEM", "OSGi", "JCR", "Angular", "Node.js"],
+    },
+    {
+      company: "PNA Technology",
+      role: "Django Python Developer",
+      period: "2017",
+      summary: "Backend development in Python and Django.",
+      highlights: ["Built web APIs with Django on top of MySQL"],
+      stack: ["Python", "Django", "MySQL"],
+    },
+    {
+      company: "SIMT",
+      role: "Software Development Intern",
+      period: "May 2016 — Jun 2016",
+      summary:
+        "First professional role — desktop and web applications on the Java-based IBM Notes/Domino 9.0 platform.",
+      highlights: ["Developed desktop and web-oriented applications in IBM Notes/Domino"],
+      stack: ["Java", "IBM Notes/Domino"],
     },
   ],
   skillGroups: [
@@ -125,5 +150,10 @@ export const PROFILE: Profile = {
       school: "Ss. Cyril and Methodius University — FCSE",
       period: "2014 — 2018",
     },
+  ],
+  languages: [
+    { name: "Macedonian", level: "Native" },
+    { name: "English", level: "Full professional (C2)" },
+    { name: "French", level: "Elementary (A1)" },
   ],
 }

@@ -40,8 +40,7 @@ Every slice exposes its public API through `index.ts` only — never import from
 
 ## Editing content
 
-- **All text, experience, skills, stats, socials, email** live in [`src/entities/profile/data.ts`](./src/entities/profile/data.ts).
-- **CV** — replace [`public/david-stojanovski-cv.pdf`](./public) (keep the filename) and rebuild. Linked from the hero and contact sections.
+- **All text, experience, skills, languages, stats, socials, email** live in [`src/entities/profile/data.ts`](./src/entities/profile/data.ts).
 - **Logo / favicon** — the isometric cube mark lives in [`src/shared/ui/logo.tsx`](./src/shared/ui/logo.tsx); standalone assets are `public/logo.svg` and `public/favicon.svg`.
 
 ## Key rules
